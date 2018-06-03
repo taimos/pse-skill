@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: PSE Alexa Skill
+Resources:
+  SkillFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: bundle.handler
+      Runtime: nodejs8.10
+      Timeout: 10
+      CodeUri: ./skill/dist/bundle.js
+      Events:
+        Skill:
+          Type: AlexaSkill
+
+Outputs:
+  SkillFunctionARN:
+    Description: ARN of the Skill function
+    Value: !GetAtt SkillFunction.Arn

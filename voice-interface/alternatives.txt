@@ -1,0 +1,116 @@
+#####################
+Welche Eigenschaft soll ich dir beschreiben?
+Welche Eigenschaft soll ich dir nennen?
+Über welche Eigenschaft soll ich dich informieren?
+Über welche Eigenschaft möchtest du dich informieren?
+Welche Eigenschaft interessiert dich?
+
+
+#####################
+Zu welchem Element soll ich dir die Eigenschaft ${attrName} nennen?
+Über welches Element möchtest du dich zur Eigenschaft ${attrName} informieren?
+Zu welchem Element möchtest du die Eigenschaft ${attrName} wissen?
+
+
+#####################
+${attrName} des Elements ${element.name} ist ${elements.formatAttribute(attr, element[attr])}
+Das Element ${element.name} hat ${attrName} von ${elements.formatAttribute(attr, element[attr])}
+Das Element ${element.name} besitzt ein ${attrName} von ${elements.formatAttribute(attr, element[attr])}
+
+
+#####################
+${attrName} des Elements ${element.name} ist mir leider nicht bekannt. Nenne mir eine andere Eigenschaft!
+Vom Element ${element.name} sind mir leider keine Informationen über ${attrName} bekannt. Interessiert dich eine andere Eigenschaft von ${element.name}?
+Über ${attrName} des Elements ${element.name} besitzt ich leider keine Informationen. Möchtest du dich über eine andere Eigenschaft des Elements ${element.name} informieren? 
+
+
+
+#####################
+Das Element ${elementName} habe ich leider nicht gefunden. Versuche ein anderes Element.
+Das Element ${elementName} befindet sich leider nicht in meiner Datenbank. Möchtest du dich zu einem anderen Element informieren?
+Zum Element ${elementName} sind mir leider keine Informationen bekannt. Kann ich dir zu einem anderen Element weiterhelfen?
+Das Element ${elementName} ist mir leider nicht bekannt. Möchtest du Informationen zu einem anderen Element?
+
+
+#####################
+
+
+#### Ausgabe von Eigenschaften
+
+#########  Symbol
+Das Symbol von Wasserstoff ist H
+H ist das Symbol von Wasserstoff
+Das Element Wasserstoff hat H als Symbol
+Das Elementsymbol für Wasserstoff ist H
+
+
+
+#########  Masse
+Die Masse von Wasserstoff ist 1,00 u
+Das Atommasse von Wasserstoff beträgt 1,00 u
+1,00 u ist die Masse von Wasserstoff
+Wasserstoff besitzt eine Atommasse von 1,00 u 
+
+
+#########  Ordnungszahl
+Die Ordnungszahl von Wasserstoff ist 1
+Wasserstoff hat die Ordnungszahl 1
+Wasserstoff besitzt die Ordnungszahl 1
+
+
+#########  Valenzelektronen
+Die Anzahl der Valenzelektronen von Wasserstoff ist 1
+Die Anzahl der Valenzelektronen von Wasserstoff beträgt 1
+Wasserstoff besitzt 1 Valenzelektron
+Wasserstoff hat 1 Außenelektron
+
+
+
+#########  Gruppennummer
+Die Gruppennummer von Wasserstoff ist 1
+Wasserstoff befindet sich in der 1. Gruppe
+Wasserstoff ist der 1. Gruppe zugeordnet
+Wasserstoff findet sich in der 1. Gruppe des Periodensystems wieder
+
+
+
+#########  Elektronegativität
+Die Elektronegativität von Wasserstoff ist 2,2
+Die Elektronegativität von Wasserstoff beträgt 2,2
+Wasserstoff hat eine Elektronegativität von 2,2
+Wasserstoff besitzt eine Elektronegativität von 2,2
+Nach Pauling besitzt Wasserstoff eine Elektronegativität von 2,2
+
+
+
+#########  Elektronenkonfiguration der Außenelektronen/Valenzelektronen
+
+Die Elektronenkonfiguration des Außenelektrons von Wasserstoff ist 1s hoch 1 (Bsp: Die Elektronenkonfiguration des Außenelektronen von Bor ist 2s hoch 2, 2p hoch 1)
+
+
+
+
+#########  Aggregatzustand
+Der Aggregatzustand von Wasserstoff bei Standardbedingungen ist gasförmig
+Bei Standardbedingungen ist der Aggregatzustand von Wasserstoff gasförmig
+
+
+#########  Schmelzpunkt
+Der Schmelzpunkt von Wasserstoff ist -259,14 °C
+Der Schmelzpunkt von Wasserstoff beträgt -229,14°C
+Wasserstoff besitzt einen Schmelzpunkt von -229,14°C
+
+
+
+#########  Siedepunkt
+Der Siedepunkt von Wasserstoff ist -252 °C
+Der Siedepunkt von Wasserstoff beträgt -252°C
+Wasserstoff besitzt einen Siedepunkt von -252°C
+Wasserstoff siedet bei -252°C
+
+
+#########  Sublimationspunkt
+Der Sublimationspunkt von {element} ist {value}
+{element} besitzt einen Sublimationspunkt von {value}
+{element} sublimiert bei {value}
+
