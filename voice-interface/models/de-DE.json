@@ -1,1 +1,838 @@
-{"interactionModel":{"languageModel":{"invocationName":"p. s. e.","intents":[{"name":"AMAZON.CancelIntent","samples":[]},{"name":"AMAZON.HelpIntent","samples":[]},{"name":"AMAZON.StopIntent","samples":[]},{"name":"DialogActivationDummyIntent","samples":[],"slots":[{"name":"dummy","type":"AMAZON.NUMBER","samples":[]}]},{"name":"GetElementAttributeIntent","samples":["was ist der {attribute} von {element}","was ist der {attribute} für {element}","was ist die {attribute} von {element}","was ist die {attribute} für {element}","was ist das {attribute} von {element}","was ist das {attribute} für {element}","was ist {attribute} von {element}","was ist {attribute} für {element}","was der {attribute} von {element} ist","was der {attribute} für {element} ist","was die {attribute} von {element} ist","was die {attribute} für {element} ist","was das {attribute} von {element} ist","was das {attribute} für {element} ist","was {attribute} von {element} ist","was {attribute} für {element} ist","dem {attribute} von {element}","dem {attribute} für {element}","der {attribute} von {element}","der {attribute} für {element}","{attribute} von {element}","{attribute} für {element}"],"slots":[{"name":"element","type":"ElementName","samples":[]},{"name":"attribute","type":"AttributeName","samples":[]}]}],"types":[{"name":"AttributeName","values":[{"id":"symbol","name":{"value":"symbol","synonyms":["zeichen","chemische zeichen","chemisches zeichen"]}},{"id":"mass","name":{"value":"masse","synonyms":["atommasse","atomgewicht","gewicht"]}},{"id":"number","name":{"value":"nummer","synonyms":["ordnungszahl","kernladungszahl","protonenzahl","elektronenzahl"]}},{"id":"outerElectrons","name":{"value":"außenelektronen","synonyms":["anzahl der außenelektronen","valenzelektronen","anzahl der valenzelektronen","bindungselektronen","anzahl der bindungselektronen"]}},{"id":"groupNumber","name":{"value":"gruppe","synonyms":["gruppennummer","gruppenummer","hauptgruppe","nebengruppe"]}},{"id":"negativity","name":{"value":"elektronegativität","synonyms":["negativität"]}},{"id":"electronConfig","name":{"value":"konfiguration","synonyms":["elektronenkonfiguration"]}}]},{"name":"ElementName","values":[{"id":"1","name":{"value":"Wasserstoff"}},{"id":"2","name":{"value":"Helium"}},{"id":"3","name":{"value":"Lithium"}},{"id":"4","name":{"value":"Beryllium"}},{"id":"5","name":{"value":"Bor"}},{"id":"6","name":{"value":"Kohlenstoff"}},{"id":"7","name":{"value":"Stickstoff"}},{"id":"8","name":{"value":"Sauerstoff"}},{"id":"9","name":{"value":"Fluor"}},{"id":"10","name":{"value":"Neon"}},{"id":"11","name":{"value":"Natrium"}},{"id":"12","name":{"value":"Magnesium"}},{"id":"13","name":{"value":"Aluminium"}},{"id":"14","name":{"value":"Silicium"}},{"id":"15","name":{"value":"Phosphor"}},{"id":"16","name":{"value":"Schwefel"}},{"id":"17","name":{"value":"Chlor"}},{"id":"18","name":{"value":"Argon"}},{"id":"19","name":{"value":"Kalium"}},{"id":"20","name":{"value":"Calcium"}},{"id":"21","name":{"value":"Scandium"}},{"id":"22","name":{"value":"Titan"}},{"id":"23","name":{"value":"Vanadium"}},{"id":"24","name":{"value":"Chrom"}},{"id":"25","name":{"value":"Mangan"}},{"id":"26","name":{"value":"Eisen"}},{"id":"27","name":{"value":"Cobalt"}},{"id":"28","name":{"value":"Nickel"}},{"id":"29","name":{"value":"Kupfer"}},{"id":"30","name":{"value":"Zink"}},{"id":"31","name":{"value":"Gallium"}},{"id":"32","name":{"value":"Germanium"}},{"id":"33","name":{"value":"Arsen"}},{"id":"34","name":{"value":"Selen"}},{"id":"35","name":{"value":"Brom"}},{"id":"36","name":{"value":"Krypton"}},{"id":"37","name":{"value":"Rubidium"}},{"id":"38","name":{"value":"Strontium"}},{"id":"39","name":{"value":"Yttrium"}},{"id":"40","name":{"value":"Zirconium"}},{"id":"41","name":{"value":"Niob"}},{"id":"42","name":{"value":"Molybdän"}},{"id":"43","name":{"value":"Technetium"}},{"id":"44","name":{"value":"Ruthenium"}},{"id":"45","name":{"value":"Rhodium"}},{"id":"46","name":{"value":"Palladium"}},{"id":"47","name":{"value":"Silber"}},{"id":"48","name":{"value":"Cadmium"}},{"id":"49","name":{"value":"Indium"}},{"id":"50","name":{"value":"Zinn"}},{"id":"51","name":{"value":"Antimon"}},{"id":"52","name":{"value":"Tellur"}},{"id":"53","name":{"value":"Iod"}},{"id":"54","name":{"value":"Xenon"}},{"id":"55","name":{"value":"Caesium"}},{"id":"56","name":{"value":"Barium"}},{"id":"57","name":{"value":"Lanthan"}},{"id":"58","name":{"value":"Cer"}},{"id":"59","name":{"value":"Praseodym"}},{"id":"60","name":{"value":"Neodym"}},{"id":"61","name":{"value":"Promethium"}},{"id":"62","name":{"value":"Samarium"}},{"id":"63","name":{"value":"Europium"}},{"id":"64","name":{"value":"Gadolinium"}},{"id":"65","name":{"value":"Terbium"}},{"id":"66","name":{"value":"Dysprosium"}},{"id":"67","name":{"value":"Holmium"}},{"id":"68","name":{"value":"Erbium"}},{"id":"69","name":{"value":"Thulium"}},{"id":"70","name":{"value":"Ytterbium"}},{"id":"71","name":{"value":"Lutetium"}},{"id":"72","name":{"value":"Hafnium"}},{"id":"73","name":{"value":"Tantal"}},{"id":"74","name":{"value":"Wolfram"}},{"id":"75","name":{"value":"Rhenium"}},{"id":"76","name":{"value":"Osmium"}},{"id":"77","name":{"value":"Iridium"}},{"id":"78","name":{"value":"Platin"}},{"id":"79","name":{"value":"Gold"}},{"id":"80","name":{"value":"Quecksilber"}},{"id":"81","name":{"value":"Thallium"}},{"id":"82","name":{"value":"Blei"}},{"id":"83","name":{"value":"Bismut"}},{"id":"84","name":{"value":"Polonium"}},{"id":"85","name":{"value":"Astat"}},{"id":"86","name":{"value":"Radon"}},{"id":"87","name":{"value":"Francium"}},{"id":"88","name":{"value":"Radium"}},{"id":"89","name":{"value":"Actinium"}},{"id":"90","name":{"value":"Thorium"}},{"id":"91","name":{"value":"Protactinium"}},{"id":"92","name":{"value":"Uran"}},{"id":"93","name":{"value":"Neptunium"}},{"id":"94","name":{"value":"Plutonium"}},{"id":"95","name":{"value":"Americium"}},{"id":"96","name":{"value":"Curium"}},{"id":"97","name":{"value":"Berkelium"}},{"id":"98","name":{"value":"Californium"}},{"id":"99","name":{"value":"Einsteinium"}},{"id":"100","name":{"value":"Fermium"}},{"id":"101","name":{"value":"Mendelevium"}},{"id":"102","name":{"value":"Nobelium"}},{"id":"103","name":{"value":"Lawrencium"}},{"id":"104","name":{"value":"Rutherfordium"}},{"id":"105","name":{"value":"Dubnium"}},{"id":"106","name":{"value":"Seaborgium"}},{"id":"107","name":{"value":"Bohrium"}},{"id":"108","name":{"value":"Hassium"}}]}]},"prompts":[{"id":"Elicit.Intent-DialogActivationDummyIntent.IntentSlot-dummy","variations":[{"type":"PlainText","value":"Dummy question"}]}],"dialog":{"intents":[{"name":"DialogActivationDummyIntent","confirmationRequired":false,"slots":[{"name":"dummy","type":"AMAZON.NUMBER","elicitationRequired":true,"confirmationRequired":false,"prompts":{"elicitation":"Elicit.Intent-DialogActivationDummyIntent.IntentSlot-dummy"}}]}]}}}
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "p. s. e.",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "DialogActivationDummyIntent",
+          "samples": [],
+          "slots": [
+            {
+              "name": "dummy",
+              "type": "AMAZON.NUMBER",
+              "samples": []
+            }
+          ]
+        },
+        {
+          "name": "GetElementAttributeIntent",
+          "samples": [
+            "was ist der {attribute} von {element}",
+            "was ist der {attribute} für {element}",
+            "was ist die {attribute} von {element}",
+            "was ist die {attribute} für {element}",
+            "was ist das {attribute} von {element}",
+            "was ist das {attribute} für {element}",
+            "was ist {attribute} von {element}",
+            "was ist {attribute} für {element}",
+            "was der {attribute} von {element} ist",
+            "was der {attribute} für {element} ist",
+            "was die {attribute} von {element} ist",
+            "was die {attribute} für {element} ist",
+            "was das {attribute} von {element} ist",
+            "was das {attribute} für {element} ist",
+            "was {attribute} von {element} ist",
+            "was {attribute} für {element} ist",
+            "dem {attribute} von {element}",
+            "dem {attribute} für {element}",
+            "der {attribute} von {element}",
+            "der {attribute} für {element}",
+            "{attribute} von {element}",
+            "{attribute} für {element}"
+          ],
+          "slots": [
+            {
+              "name": "element",
+              "type": "ElementName",
+              "samples": []
+            },
+            {
+              "name": "attribute",
+              "type": "AttributeName",
+              "samples": []
+            }
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "AttributeName",
+          "values": [
+            {
+              "id": "symbol",
+              "name": {
+                "value": "symbol",
+                "synonyms": [
+                  "zeichen",
+                  "chemische zeichen",
+                  "chemisches zeichen"
+                ]
+              }
+            },
+            {
+              "id": "mass",
+              "name": {
+                "value": "masse",
+                "synonyms": [
+                  "atommasse",
+                  "atomgewicht",
+                  "gewicht"
+                ]
+              }
+            },
+            {
+              "id": "number",
+              "name": {
+                "value": "nummer",
+                "synonyms": [
+                  "ordnungszahl",
+                  "kernladungszahl",
+                  "protonenzahl",
+                  "elektronenzahl"
+                ]
+              }
+            },
+            {
+              "id": "outerElectrons",
+              "name": {
+                "value": "außenelektronen",
+                "synonyms": [
+                  "anzahl der außenelektronen",
+                  "valenzelektronen",
+                  "anzahl der valenzelektronen",
+                  "bindungselektronen",
+                  "anzahl der bindungselektronen"
+                ]
+              }
+            },
+            {
+              "id": "groupNumber",
+              "name": {
+                "value": "gruppe",
+                "synonyms": [
+                  "gruppennummer",
+                  "gruppenummer",
+                  "hauptgruppe",
+                  "nebengruppe"
+                ]
+              }
+            },
+            {
+              "id": "negativity",
+              "name": {
+                "value": "elektronegativität",
+                "synonyms": [
+                  "negativität"
+                ]
+              }
+            },
+            {
+              "id": "electronConfig",
+              "name": {
+                "value": "konfiguration",
+                "synonyms": [
+                  "elektronenkonfiguration"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "ElementName",
+          "values": [
+            {
+              "id": "1",
+              "name": {
+                "value": "Wasserstoff"
+              }
+            },
+            {
+              "id": "2",
+              "name": {
+                "value": "Helium"
+              }
+            },
+            {
+              "id": "3",
+              "name": {
+                "value": "Lithium"
+              }
+            },
+            {
+              "id": "4",
+              "name": {
+                "value": "Beryllium"
+              }
+            },
+            {
+              "id": "5",
+              "name": {
+                "value": "Bor"
+              }
+            },
+            {
+              "id": "6",
+              "name": {
+                "value": "Kohlenstoff"
+              }
+            },
+            {
+              "id": "7",
+              "name": {
+                "value": "Stickstoff"
+              }
+            },
+            {
+              "id": "8",
+              "name": {
+                "value": "Sauerstoff"
+              }
+            },
+            {
+              "id": "9",
+              "name": {
+                "value": "Fluor"
+              }
+            },
+            {
+              "id": "10",
+              "name": {
+                "value": "Neon"
+              }
+            },
+            {
+              "id": "11",
+              "name": {
+                "value": "Natrium"
+              }
+            },
+            {
+              "id": "12",
+              "name": {
+                "value": "Magnesium"
+              }
+            },
+            {
+              "id": "13",
+              "name": {
+                "value": "Aluminium"
+              }
+            },
+            {
+              "id": "14",
+              "name": {
+                "value": "Silicium"
+              }
+            },
+            {
+              "id": "15",
+              "name": {
+                "value": "Phosphor"
+              }
+            },
+            {
+              "id": "16",
+              "name": {
+                "value": "Schwefel"
+              }
+            },
+            {
+              "id": "17",
+              "name": {
+                "value": "Chlor"
+              }
+            },
+            {
+              "id": "18",
+              "name": {
+                "value": "Argon"
+              }
+            },
+            {
+              "id": "19",
+              "name": {
+                "value": "Kalium"
+              }
+            },
+            {
+              "id": "20",
+              "name": {
+                "value": "Calcium"
+              }
+            },
+            {
+              "id": "21",
+              "name": {
+                "value": "Scandium"
+              }
+            },
+            {
+              "id": "22",
+              "name": {
+                "value": "Titan"
+              }
+            },
+            {
+              "id": "23",
+              "name": {
+                "value": "Vanadium"
+              }
+            },
+            {
+              "id": "24",
+              "name": {
+                "value": "Chrom"
+              }
+            },
+            {
+              "id": "25",
+              "name": {
+                "value": "Mangan"
+              }
+            },
+            {
+              "id": "26",
+              "name": {
+                "value": "Eisen"
+              }
+            },
+            {
+              "id": "27",
+              "name": {
+                "value": "Cobalt"
+              }
+            },
+            {
+              "id": "28",
+              "name": {
+                "value": "Nickel"
+              }
+            },
+            {
+              "id": "29",
+              "name": {
+                "value": "Kupfer"
+              }
+            },
+            {
+              "id": "30",
+              "name": {
+                "value": "Zink"
+              }
+            },
+            {
+              "id": "31",
+              "name": {
+                "value": "Gallium"
+              }
+            },
+            {
+              "id": "32",
+              "name": {
+                "value": "Germanium"
+              }
+            },
+            {
+              "id": "33",
+              "name": {
+                "value": "Arsen"
+              }
+            },
+            {
+              "id": "34",
+              "name": {
+                "value": "Selen"
+              }
+            },
+            {
+              "id": "35",
+              "name": {
+                "value": "Brom"
+              }
+            },
+            {
+              "id": "36",
+              "name": {
+                "value": "Krypton"
+              }
+            },
+            {
+              "id": "37",
+              "name": {
+                "value": "Rubidium"
+              }
+            },
+            {
+              "id": "38",
+              "name": {
+                "value": "Strontium"
+              }
+            },
+            {
+              "id": "39",
+              "name": {
+                "value": "Yttrium"
+              }
+            },
+            {
+              "id": "40",
+              "name": {
+                "value": "Zirconium"
+              }
+            },
+            {
+              "id": "41",
+              "name": {
+                "value": "Niob"
+              }
+            },
+            {
+              "id": "42",
+              "name": {
+                "value": "Molybdän"
+              }
+            },
+            {
+              "id": "43",
+              "name": {
+                "value": "Technetium"
+              }
+            },
+            {
+              "id": "44",
+              "name": {
+                "value": "Ruthenium"
+              }
+            },
+            {
+              "id": "45",
+              "name": {
+                "value": "Rhodium"
+              }
+            },
+            {
+              "id": "46",
+              "name": {
+                "value": "Palladium"
+              }
+            },
+            {
+              "id": "47",
+              "name": {
+                "value": "Silber"
+              }
+            },
+            {
+              "id": "48",
+              "name": {
+                "value": "Cadmium"
+              }
+            },
+            {
+              "id": "49",
+              "name": {
+                "value": "Indium"
+              }
+            },
+            {
+              "id": "50",
+              "name": {
+                "value": "Zinn"
+              }
+            },
+            {
+              "id": "51",
+              "name": {
+                "value": "Antimon"
+              }
+            },
+            {
+              "id": "52",
+              "name": {
+                "value": "Tellur"
+              }
+            },
+            {
+              "id": "53",
+              "name": {
+                "value": "Iod"
+              }
+            },
+            {
+              "id": "54",
+              "name": {
+                "value": "Xenon"
+              }
+            },
+            {
+              "id": "55",
+              "name": {
+                "value": "Caesium"
+              }
+            },
+            {
+              "id": "56",
+              "name": {
+                "value": "Barium"
+              }
+            },
+            {
+              "id": "57",
+              "name": {
+                "value": "Lanthan"
+              }
+            },
+            {
+              "id": "58",
+              "name": {
+                "value": "Cer"
+              }
+            },
+            {
+              "id": "59",
+              "name": {
+                "value": "Praseodym"
+              }
+            },
+            {
+              "id": "60",
+              "name": {
+                "value": "Neodym"
+              }
+            },
+            {
+              "id": "61",
+              "name": {
+                "value": "Promethium"
+              }
+            },
+            {
+              "id": "62",
+              "name": {
+                "value": "Samarium"
+              }
+            },
+            {
+              "id": "63",
+              "name": {
+                "value": "Europium"
+              }
+            },
+            {
+              "id": "64",
+              "name": {
+                "value": "Gadolinium"
+              }
+            },
+            {
+              "id": "65",
+              "name": {
+                "value": "Terbium"
+              }
+            },
+            {
+              "id": "66",
+              "name": {
+                "value": "Dysprosium"
+              }
+            },
+            {
+              "id": "67",
+              "name": {
+                "value": "Holmium"
+              }
+            },
+            {
+              "id": "68",
+              "name": {
+                "value": "Erbium"
+              }
+            },
+            {
+              "id": "69",
+              "name": {
+                "value": "Thulium"
+              }
+            },
+            {
+              "id": "70",
+              "name": {
+                "value": "Ytterbium"
+              }
+            },
+            {
+              "id": "71",
+              "name": {
+                "value": "Lutetium"
+              }
+            },
+            {
+              "id": "72",
+              "name": {
+                "value": "Hafnium"
+              }
+            },
+            {
+              "id": "73",
+              "name": {
+                "value": "Tantal"
+              }
+            },
+            {
+              "id": "74",
+              "name": {
+                "value": "Wolfram"
+              }
+            },
+            {
+              "id": "75",
+              "name": {
+                "value": "Rhenium"
+              }
+            },
+            {
+              "id": "76",
+              "name": {
+                "value": "Osmium"
+              }
+            },
+            {
+              "id": "77",
+              "name": {
+                "value": "Iridium"
+              }
+            },
+            {
+              "id": "78",
+              "name": {
+                "value": "Platin"
+              }
+            },
+            {
+              "id": "79",
+              "name": {
+                "value": "Gold"
+              }
+            },
+            {
+              "id": "80",
+              "name": {
+                "value": "Quecksilber"
+              }
+            },
+            {
+              "id": "81",
+              "name": {
+                "value": "Thallium"
+              }
+            },
+            {
+              "id": "82",
+              "name": {
+                "value": "Blei"
+              }
+            },
+            {
+              "id": "83",
+              "name": {
+                "value": "Bismut"
+              }
+            },
+            {
+              "id": "84",
+              "name": {
+                "value": "Polonium"
+              }
+            },
+            {
+              "id": "85",
+              "name": {
+                "value": "Astat"
+              }
+            },
+            {
+              "id": "86",
+              "name": {
+                "value": "Radon"
+              }
+            },
+            {
+              "id": "87",
+              "name": {
+                "value": "Francium"
+              }
+            },
+            {
+              "id": "88",
+              "name": {
+                "value": "Radium"
+              }
+            },
+            {
+              "id": "89",
+              "name": {
+                "value": "Actinium"
+              }
+            },
+            {
+              "id": "90",
+              "name": {
+                "value": "Thorium"
+              }
+            },
+            {
+              "id": "91",
+              "name": {
+                "value": "Protactinium"
+              }
+            },
+            {
+              "id": "92",
+              "name": {
+                "value": "Uran"
+              }
+            },
+            {
+              "id": "93",
+              "name": {
+                "value": "Neptunium"
+              }
+            },
+            {
+              "id": "94",
+              "name": {
+                "value": "Plutonium"
+              }
+            },
+            {
+              "id": "95",
+              "name": {
+                "value": "Americium"
+              }
+            },
+            {
+              "id": "96",
+              "name": {
+                "value": "Curium"
+              }
+            },
+            {
+              "id": "97",
+              "name": {
+                "value": "Berkelium"
+              }
+            },
+            {
+              "id": "98",
+              "name": {
+                "value": "Californium"
+              }
+            },
+            {
+              "id": "99",
+              "name": {
+                "value": "Einsteinium"
+              }
+            },
+            {
+              "id": "100",
+              "name": {
+                "value": "Fermium"
+              }
+            },
+            {
+              "id": "101",
+              "name": {
+                "value": "Mendelevium"
+              }
+            },
+            {
+              "id": "102",
+              "name": {
+                "value": "Nobelium"
+              }
+            },
+            {
+              "id": "103",
+              "name": {
+                "value": "Lawrencium"
+              }
+            },
+            {
+              "id": "104",
+              "name": {
+                "value": "Rutherfordium"
+              }
+            },
+            {
+              "id": "105",
+              "name": {
+                "value": "Dubnium"
+              }
+            },
+            {
+              "id": "106",
+              "name": {
+                "value": "Seaborgium"
+              }
+            },
+            {
+              "id": "107",
+              "name": {
+                "value": "Bohrium"
+              }
+            },
+            {
+              "id": "108",
+              "name": {
+                "value": "Hassium"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Intent-DialogActivationDummyIntent.IntentSlot-dummy",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dummy question"
+          }
+        ]
+      }
+    ],
+    "dialog": {
+      "intents": [
+        {
+          "name": "DialogActivationDummyIntent",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "dummy",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Intent-DialogActivationDummyIntent.IntentSlot-dummy"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

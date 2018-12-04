@@ -107,7 +107,7 @@ class StopHandler extends NamedIntentRequestHandler {
 
 class ErrorHandler {
 
-  public canHandle() : boolean {
+  public canHandle(handlerInput : HandlerInput) : boolean {
     return true;
   }
 
