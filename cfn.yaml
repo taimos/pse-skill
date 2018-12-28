@@ -10,9 +10,12 @@ Resources:
       Timeout: 10
       AutoPublishAlias: latest
       CodeUri: ./skill/dist/bundle.js
-      Events:
-        Skill:
-          Type: AlexaSkill
+  SkillFunctionPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:invokeFunction
+      FunctionName: !Ref SkillFunction
+      Principal: alexa-appkit.amazon.com
 
 Outputs:
   overrides:
