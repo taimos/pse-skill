@@ -1,1 +1,8 @@
 *.packaged.yaml
+
+deployment/build/
+deployment/dist/
+deployment/*.js
+deployment/*.d.ts
+deployment/node_modules
+deployment/cdk.json

@@ -1,0 +1,48 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "interfaces": [
+          {
+            "type": "RENDER_TEMPLATE",
+            "minimumTemplateVersion": "1.0"
+          }
+        ]
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false
+    },
+    "publishingInformation": {
+      "locales": {
+        "de-DE": {
+          "name": "Periodensystem der Elemente",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/8938/71c6cf10ac3942a096f66102bf472151/APP_ICON?versionId=huQx1V_fPKINKQeOaZxUiFTgO5_kNCBY&AWSAccessKeyId=AKIAJFEYRBGIHK2BBYKA&Expires=1546097426&Signature=AWH0Xl3QXj5qodcjjrKgKTtc%2FGU%3D",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/d8b1/6e450d1dd30d41edaf665aa41ba66508/APP_ICON_LARGE?versionId=jwzUkUWY2E.Svyh6MJoHDEXCYhPaT_MV&AWSAccessKeyId=AKIAJFEYRBGIHK2BBYKA&Expires=1546097426&Signature=%2FEUKjJjJ0phiMDu80jrOq5xGkVA%3D",
+          "summary": "Der Skill liefert wichtige Kennzahlen zu chemischen Elementen.",
+          "description": "Der Skill liefert wichtige Kennzahlen, wie Ordnungszahl, Atommasse, Gruppenzugehörigkeit und Ähnliches, zu chemischen Elementen.\n\nFolgende Eigenschaften können abgefragt werden:\n- Symbol\n- Masse\n- Ordnungszahl\n- Anzahl der Außenelektronen\n- Gruppennummer\n- Elektronegativität\n- Elektronenkonfiguration",
+          "examplePhrases": [
+            "Alexa, frage PSE nach dem Symbol von Wasserstoff.",
+            "Alexa, frage PSE was die Masse von Magnesium ist.",
+            "Alexa, frage PSE nach der Anzahl der Valenzelektronen von Natrium."
+          ],
+          "keywords": [
+            "Chemie",
+            "Elemente",
+            "Periodensystem",
+            "Atommasse"
+          ]
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Skill presents details of chemical elements.",
+      "category": "EDUCATION_AND_REFERENCE",
+      "distributionCountries": []
+    }
+  }
+}
