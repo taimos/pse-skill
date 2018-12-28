@@ -10,7 +10,7 @@ phases:
       - npm install --prefix voice-interface/
       - npm run start --prefix voice-interface/
       - mv voice-interface/models/*.json interactionModel/
-      - aws cloudformation package --template-file cfn.yaml --s3-bucket ${S3_BUCKET} --output-template-file cfn.packaged.yaml
+      - aws cloudformation package --template-file cfn.yaml --s3-bucket ${ARTIFACTS_BUCKET} --output-template-file cfn.packaged.yaml
 
 artifacts:
   files:
