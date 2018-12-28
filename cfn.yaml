@@ -15,9 +15,6 @@ Resources:
           Type: AlexaSkill
 
 Outputs:
-  SkillFunctionARN:
-    Description: ARN of the Skill function
-    Value: !GetAtt SkillFunction.Arn
   overrides:
     Value: !Sub |-
       {

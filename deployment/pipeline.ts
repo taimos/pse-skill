@@ -30,8 +30,8 @@ class AlexaSkillDeployAction extends Action {
       stage: props.stage,
       runOrder: props.runOrder,
       artifactBounds: {
-        minInputs: 0,
-        maxInputs: 10,
+        minInputs: 1,
+        maxInputs: 2,
         minOutputs: 0,
         maxOutputs: 1,
       },
