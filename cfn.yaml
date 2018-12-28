@@ -14,7 +14,7 @@ Resources:
     Type: AWS::Lambda::Permission
     Properties:
       Action: lambda:invokeFunction
-      FunctionName: !Ref SkillFunction
+      FunctionName: !Ref SkillFunction.Version
       Principal: alexa-appkit.amazon.com
 
 Outputs:
