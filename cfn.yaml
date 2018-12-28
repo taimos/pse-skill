@@ -8,6 +8,7 @@ Resources:
       Handler: bundle.handler
       Runtime: nodejs8.10
       Timeout: 10
+      AutoPublishAlias: latest
       CodeUri: ./skill/dist/bundle.js
       Events:
         Skill:
