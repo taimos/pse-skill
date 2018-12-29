@@ -5,7 +5,8 @@
     "build": "tsc",
     "watch": "tsc -w",
     "synth": "cdk synth -o build --app 'node dist/pipeline.js'",
-    "deploy": "cdk deploy --app 'node dist/pipeline.js'"
+    "deploy": "cdk deploy --app 'node dist/pipeline.js'",
+    "diff": "cdk diff --app 'node dist/pipeline.js'"
   },
   "devDependencies": {
     "@types/node": "^10.9.4",

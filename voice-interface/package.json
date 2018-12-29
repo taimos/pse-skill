@@ -2,11 +2,10 @@
   "name": "pse-skill-vui",
   "version": "1.0.0",
   "description": "PSE Skill Voice Interface",
-  "main": "generate.js",
+  "main": "generate.ts",
   "private": true,
   "scripts": {
-    "test": "eslint .",
-    "start": "node generate.js"
+    "start": "node -r ts-node/register generate.ts"
   },
   "keywords": [
     "alexa"
@@ -18,10 +17,11 @@
     "url": "git+ssh://git@github.com/taimos/pse-skill.git"
   },
   "dependencies": {
-    "alexa-vui-generator": "^1.2.0",
+    "alexa-vui-generator": "^2.0.1",
     "csvdata": "^1.4.0"
   },
   "devDependencies": {
-    "eslint": "^3.0.0"
+    "ts-node": "^6.0.1",
+    "typescript": "^3.2.2"
   }
 }

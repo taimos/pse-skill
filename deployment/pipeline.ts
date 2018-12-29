@@ -90,7 +90,6 @@ class AlexaSkillPipelineStack extends Stack {
               'npm test --prefix skill/',
               'npm run build --prefix skill/',
               'npm run start --prefix voice-interface/',
-              'mv voice-interface/models/*.json interactionModel/',
               `aws cloudformation package --template-file cfn.yaml --s3-bucket ${pipeline.artifactBucket.bucketName} --output-template-file cfn.packaged.yaml`,
             ],
           },

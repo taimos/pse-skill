@@ -1,4 +1,5 @@
 *.packaged.yaml
+interactionModel/
 
 deployment/build/
 deployment/dist/
