@@ -17,7 +17,7 @@
     "url": "git+ssh://git@github.com/taimos/pse-skill.git"
   },
   "dependencies": {
-    "alexa-vui-generator": "^2.0.1",
+    "alexa-vui-generator": "^2.0.2",
     "csvdata": "^1.4.0"
   },
   "devDependencies": {

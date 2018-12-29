@@ -1,26 +1,19 @@
-import {
-  addValueToType,
-  createLanguageModel,
-  createNewSlotType,
-  readIntentsFromYAML,
-  readTypesFromYAML
-} from 'alexa-vui-generator';
-
+import {createLanguageModel, readIntentsFromYAML, readTypesFromYAML} from 'alexa-vui-generator';
 import * as csvdata from 'csvdata';
+import {VoiceInterface} from "alexa-vui-generator/dist/voicemodel";
 
-const typeGenerator = csvdata.load('./elements.csv', {delimiter: ',', log: false}).then(elements => {
-  'use strict';
-  let customTypes = [];
-  let elementNameType = createNewSlotType(customTypes, 'ElementName');
+const typeGenerator = async (vui : VoiceInterface, locale : string) : Promise<VoiceInterface> => {
+  const elements = await csvdata.load('./elements.csv', {delimiter: ',', log: false});
+
+  let elementNameType = vui.getOrCreateSlotType('ElementName');
   elements.forEach(keyword => {
-    addValueToType(elementNameType, keyword.number.toString(), keyword.name, []);
+    vui.addValueToSlotType(elementNameType, keyword.number.toString(), keyword.name, []);
   });
-  return customTypes;
-});
+  return vui;
+};
 
 // noinspection JSIgnoredPromiseFromCall
 createLanguageModel({
-  intentCreators: readIntentsFromYAML,
-  typeCreators: [readTypesFromYAML, typeGenerator],
-  invocation: 'p. s. e.'
+  invocation: 'p. s. e.',
+  processors: [readIntentsFromYAML, readTypesFromYAML, typeGenerator],
 }, 'de-DE', '../interactionModel');
