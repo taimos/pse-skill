@@ -2,15 +2,14 @@
   "name": "pse-skill-pipeline",
   "version": "0.1.0",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
-    "synth": "cdk synth -o build --app 'node dist/pipeline.js'",
-    "deploy": "cdk deploy --app 'node dist/pipeline.js'",
-    "diff": "cdk diff --app 'node dist/pipeline.js'"
+    "synth": "cdk synth -o build --app 'node -r ts-node/register pipeline.ts'",
+    "deploy": "cdk deploy --app 'node -r ts-node/register pipeline.ts'",
+    "diff": "cdk diff --app 'node -r ts-node/register pipeline.ts'"
   },
   "devDependencies": {
     "@types/node": "^10.9.4",
     "typescript": "^3.1.2",
+    "ts-node": "^6.0.1",
     "aws-cdk": "^0.21.0"
   },
   "dependencies": {
