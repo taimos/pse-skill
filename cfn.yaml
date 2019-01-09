@@ -12,6 +12,7 @@ Resources:
       CodeUri: ./skill/dist/bundle.js
   SkillFunctionPermission:
     Type: AWS::Lambda::Permission
+    DeletionPolicy: Retain
     Properties:
       Action: lambda:invokeFunction
       FunctionName: !Ref SkillFunction.Version
