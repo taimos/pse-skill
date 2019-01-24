@@ -4,7 +4,7 @@ import {
   PipelineCreateReplaceChangeSetAction,
   PipelineExecuteChangeSetAction,
 } from '@aws-cdk/aws-cloudformation';
-import {GitHubSource, LinuxBuildImage, Project, S3BucketBuildArtifacts} from '@aws-cdk/aws-codebuild';
+import {LinuxBuildImage, Project, S3BucketBuildArtifacts} from '@aws-cdk/aws-codebuild';
 import {GitHubSourceAction, Pipeline} from '@aws-cdk/aws-codepipeline';
 import {
   Action,
@@ -62,7 +62,7 @@ class AlexaSkillPipelineStack extends Stack {
     const sourceStage = pipeline.addStage('Source');
 
     const githubAccessToken = new SecretParameter(this, 'GithubToken', {ssmParameter: 'GithubToken'});
-    new GitHubSourceAction(this, 'GitHubSource', {
+    const gitHubSourceAction = new GitHubSourceAction(this, 'GitHubSource', {
       stage: sourceStage,
       owner: 'taimos',
       repo: 'pse-skill',
@@ -71,11 +71,6 @@ class AlexaSkillPipelineStack extends Stack {
 
     // Build
     const buildProject = new Project(this, 'BuildProject', {
-      source: new GitHubSource({
-        owner: 'taimos',
-        repo: 'pse-skill',
-        oauthToken: githubAccessToken.value,
-      }),
       buildSpec: {
         version: 0.2,
         phases: {
@@ -112,7 +107,9 @@ class AlexaSkillPipelineStack extends Stack {
     });
 
     const buildStage = pipeline.addStage('Build');
-    const buildAction = buildProject.addToPipeline(buildStage, 'CodeBuild', {});
+    const buildAction = buildProject.addToPipeline(buildStage, 'CodeBuild', {
+      inputArtifact: gitHubSourceAction.outputArtifact,
+    });
 
     // Deploy
     const deployStage = pipeline.addStage('Deploy');
