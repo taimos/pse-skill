@@ -241,7 +241,7 @@ describe('Test GetElementAttributeIntent', () => {
       ],
       shouldEndSession: true,
     },
-  ], 'should handle ranking from LaunchRequest');
+  ], 'should handle filled slot (mass) from LaunchRequest');
 
 });
 

@@ -13,6 +13,7 @@ Resources:
   SkillFunctionPermission:
     Type: AWS::Lambda::Permission
     DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
     Properties:
       Action: lambda:invokeFunction
       FunctionName: !Ref SkillFunction.Version
