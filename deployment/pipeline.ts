@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import {AlexaSkillDeployAction} from '@aws-cdk/alexa-ask';
 import {
   CloudFormationCapabilities,
   PipelineCreateReplaceChangeSetAction,
@@ -6,67 +7,26 @@ import {
 } from '@aws-cdk/aws-cloudformation';
 import {LinuxBuildImage, Project, S3BucketBuildArtifacts} from '@aws-cdk/aws-codebuild';
 import {GitHubSourceAction, Pipeline} from '@aws-cdk/aws-codepipeline';
-import {
-  Action,
-  ActionCategory,
-  Artifact,
-  CommonActionConstructProps,
-  CommonActionProps,
-} from '@aws-cdk/aws-codepipeline-api';
-import {App, Construct, Secret, SecretParameter, Stack, StackProps} from '@aws-cdk/cdk';
+import {SecretString} from '@aws-cdk/aws-secretsmanager';
 
-interface AlexaSkillDeployActionProps extends CommonActionProps, CommonActionConstructProps {
-  clientId : Secret;
-  clientSecret : Secret;
-  refreshToken : Secret;
-  skillId : string;
-  sourceArtifact : Artifact;
-  overrideArtifact? : Artifact;
-}
-
-class AlexaSkillDeployAction extends Action {
-  constructor(parent : Construct, id : string, props : AlexaSkillDeployActionProps) {
-    super(parent, id, {
-      stage: props.stage,
-      runOrder: props.runOrder,
-      artifactBounds: {
-        minInputs: 1,
-        maxInputs: 2,
-        minOutputs: 0,
-        maxOutputs: 1,
-      },
-      owner: 'ThirdParty',
-      provider: 'AlexaSkillsKit',
-      category: ActionCategory.Deploy,
-      configuration: {
-        ClientId: props.clientId,
-        ClientSecret: props.clientSecret,
-        RefreshToken: props.refreshToken,
-        SkillId: props.skillId,
-      },
-    });
-    this.addInputArtifact(props.sourceArtifact);
-    if (props.overrideArtifact) {
-      this.addInputArtifact(props.overrideArtifact);
-    }
-  }
-}
+import {App, Secret, Stack, StackProps} from '@aws-cdk/cdk';
 
 class AlexaSkillPipelineStack extends Stack {
   constructor(parent : App, name : string, props? : StackProps) {
     super(parent, name, props);
+    this.templateOptions.description = 'The deployment pipeline for the pse-skill';
 
     const pipeline = new Pipeline(this, 'Pipeline', {});
 
     // Source
     const sourceStage = pipeline.addStage('Source');
 
-    const githubAccessToken = new SecretParameter(this, 'GithubToken', {ssmParameter: 'GithubToken'});
+    const githubAccessToken = new SecretString(this, 'GithubToken', {secretId: 'GitHub'});
     const gitHubSourceAction = new GitHubSourceAction(this, 'GitHubSource', {
       stage: sourceStage,
       owner: 'taimos',
       repo: 'pse-skill',
-      oauthToken: githubAccessToken.value,
+      oauthToken: new Secret(githubAccessToken.jsonFieldValue('Token')),
     });
 
     // Build
@@ -135,17 +95,15 @@ class AlexaSkillPipelineStack extends Stack {
       outputArtifactName: 'CloudFormation',
     });
 
-    const clientId = new SecretParameter(this, 'AlexaClientId', {ssmParameter: '/Alexa/ClientId'});
-    const clientSecret = new SecretParameter(this, 'AlexaClientSecret', {ssmParameter: '/Alexa/ClientSecret'});
-    const refreshToken = new SecretParameter(this, 'AlexaRefreshToken', {ssmParameter: '/Alexa/RefreshToken'});
+    const alexaSecrets = new SecretString(this, 'AlexaSecrets', {secretId: 'Alexa'});
     new AlexaSkillDeployAction(this, 'DeploySkill', {
       stage: deployStage,
       runOrder: 3,
-      sourceArtifact: buildAction.outputArtifact,
-      overrideArtifact: executePipeline.outputArtifact,
-      clientId: clientId.value,
-      clientSecret: clientSecret.value,
-      refreshToken: refreshToken.value,
+      inputArtifact: buildAction.outputArtifact,
+      parameterOverridesArtifact: executePipeline.outputArtifact,
+      clientId: new Secret(alexaSecrets.jsonFieldValue('ClientId')),
+      clientSecret: new Secret(alexaSecrets.jsonFieldValue('ClientSecret')),
+      refreshToken: new Secret(alexaSecrets.jsonFieldValue('RefreshToken')),
       skillId: 'amzn1.ask.skill.a5cbce33-2287-40ad-a408-d8ccccb4c794',
     });
 

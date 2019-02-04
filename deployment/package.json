@@ -8,18 +8,20 @@
   },
   "devDependencies": {
     "@types/node": "^10.9.4",
-    "typescript": "^3.1.2",
+    "aws-cdk": "^0.23.0",
     "ts-node": "^6.0.1",
-    "aws-cdk": "^0.21.0"
+    "typescript": "^3.1.2"
   },
   "dependencies": {
-    "@aws-cdk/aws-cloudformation": "^0.21.0",
-    "@aws-cdk/aws-codebuild": "^0.21.0",
-    "@aws-cdk/aws-codecommit": "^0.21.0",
-    "@aws-cdk/aws-codepipeline": "^0.21.0",
-    "@aws-cdk/aws-codepipeline-api": "^0.21.0",
-    "@aws-cdk/aws-ecr": "^0.21.0",
-    "@aws-cdk/aws-iam": "^0.21.0",
-    "@aws-cdk/cdk": "^0.21.0"
+    "@aws-cdk/alexa-ask": "^0.23.0",
+    "@aws-cdk/aws-cloudformation": "^0.23.0",
+    "@aws-cdk/aws-codebuild": "^0.23.0",
+    "@aws-cdk/aws-codecommit": "^0.23.0",
+    "@aws-cdk/aws-codepipeline": "^0.23.0",
+    "@aws-cdk/aws-codepipeline-api": "^0.23.0",
+    "@aws-cdk/aws-ecr": "^0.23.0",
+    "@aws-cdk/aws-iam": "^0.23.0",
+    "@aws-cdk/aws-secretsmanager": "^0.23.0",
+    "@aws-cdk/cdk": "^0.23.0"
   }
 }
