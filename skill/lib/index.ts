@@ -2,12 +2,12 @@
  * Copyright (c) 2018. Taimos GmbH http://www.taimos.de
  */
 
-import {HandlerInput, SkillBuilders} from 'ask-sdk';
-import {NamedIntentRequestHandler, ResponseHelper, SlotHelper} from 'ask-sdk-addon';
-import {LambdaHandler} from 'ask-sdk-core/dist/skill/factory/BaseSkillFactory';
-import {Response} from 'ask-sdk-model';
+import { HandlerInput, SkillBuilders } from 'ask-sdk';
+import { NamedIntentRequestHandler, ResponseHelper, SlotHelper } from 'ask-sdk-addon';
+import { LambdaHandler } from 'ask-sdk-core/dist/skill/factory/BaseSkillFactory';
+import { Response } from 'ask-sdk-model';
 import * as Speech from 'ssml-builder';
-import {formatAttribute, getElementById} from './services/elements';
+import { formatAttribute, getElementById } from './services/elements';
 
 class LaunchRequestHandler extends NamedIntentRequestHandler {
   constructor() {
@@ -16,9 +16,9 @@ class LaunchRequestHandler extends NamedIntentRequestHandler {
 
   public async handle(handlerInput : HandlerInput) : Promise<Response> {
     return handlerInput.responseBuilder
-        .speak(new Speech().say('Willkommen bei Taimos P.S.E.!').pause('2s').say('Wie kann ich helfen?').ssml(true))
-        .reprompt('Wie kann ich helfen?')
-        .getResponse();
+      .speak(new Speech().say('Willkommen bei Taimos P.S.E.!').pause('2s').say('Wie kann ich helfen?').ssml(true))
+      .reprompt('Wie kann ich helfen?')
+      .getResponse();
   }
 }
 
@@ -121,19 +121,19 @@ class ErrorHandler {
     const helpText2 = 'Was willst du wissen?';
 
     return handlerInput.responseBuilder
-        .speak(`Entschuldigung das habe ich nicht verstanden! ${helpText} ${helpText2}`)
-        .reprompt(helpText2)
-        .getResponse();
+      .speak(`Entschuldigung das habe ich nicht verstanden! ${helpText} ${helpText2}`)
+      .reprompt(helpText2)
+      .getResponse();
   }
 }
 
 export const handler : LambdaHandler = SkillBuilders.standard()
-    .withSkillId('amzn1.ask.skill.a5cbce33-2287-40ad-a408-d8ccccb4c794')
-    .addRequestHandlers(
-        new LaunchRequestHandler(),
-        new GetElementAttributeIntentHandler(),
-        new HelpIntentHandler(),
-        new StopHandler(),
-    )
-    .addErrorHandlers(new ErrorHandler())
-    .lambda();
+  .withSkillId('amzn1.ask.skill.a5cbce33-2287-40ad-a408-d8ccccb4c794')
+  .addRequestHandlers(
+    new LaunchRequestHandler(),
+    new GetElementAttributeIntentHandler(),
+    new HelpIntentHandler(),
+    new StopHandler(),
+  )
+  .addErrorHandlers(new ErrorHandler())
+  .lambda();

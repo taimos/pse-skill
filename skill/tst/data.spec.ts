@@ -2,9 +2,9 @@
  * Copyright (c) 2018. Taimos GmbH http://www.taimos.de
  */
 
-import {expect} from 'chai';
-import {describe, it} from 'mocha';
-import {getElementById, readElements} from '../lib/services/elements';
+import { expect } from 'chai';
+import { describe, it } from 'mocha';
+import { getElementById, readElements } from '../lib/services/elements';
 
 describe('Test Data', () => {
 

@@ -4,7 +4,7 @@
 
 'use strict';
 
-import {data, Element} from './elementData';
+import { data, Element } from './elementData';
 
 export async function readElements() : Promise<{ [key : string] : Element }> {
   return Promise.resolve(data);
@@ -56,13 +56,13 @@ export function formatAttribute(element : Element, attribute : string, attribute
 const formatAttributeElectronConfig = (element) : string[] => {
   // e.g. '2s^2 2p^1' => '2s hoch 2 <pause> 2p hoch 1'
   const configString = element.electronConfig
-      .split(' ')
-      .map((part) => {
-        const match = /(\d+)([spdf])\^(\d+)/.exec(part);
-        console.log(match);
-        return `<say-as interpret-as="number">${match[1]}</say-as><say-as interpret-as="characters">${match[2]}</say-as> hoch <say-as interpret-as="number">${match[3]}</say-as>`;
-      })
-      .join(' <break time=\'500ms\'/> ');
+    .split(' ')
+    .map((part) => {
+      const match = /(\d+)([spdf])\^(\d+)/.exec(part);
+      console.log(match);
+      return `<say-as interpret-as="number">${match[1]}</say-as><say-as interpret-as="characters">${match[2]}</say-as> hoch <say-as interpret-as="number">${match[3]}</say-as>`;
+    })
+    .join(' <break time=\'500ms\'/> ');
 
   if (element.outerElectrons === 1) {
     return [`Die Elektronenkonfiguration des Außenelektrons von ${element.name} ist ${configString}`];

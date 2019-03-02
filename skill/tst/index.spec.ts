@@ -1,6 +1,6 @@
-import {AlexaTest, IntentRequestBuilder, LaunchRequestBuilder, SkillSettings} from 'ask-sdk-test';
-import {describe, it} from 'mocha';
-import {handler as skillHandler} from '../lib/';
+import { AlexaTest, IntentRequestBuilder, LaunchRequestBuilder, SkillSettings } from 'ask-sdk-test';
+import { describe, it } from 'mocha';
+import { handler as skillHandler } from '../lib/';
 
 // initialize the testing framework
 const skillSettings : SkillSettings = {
@@ -51,9 +51,9 @@ describe('Test GetElementAttributeIntent', () => {
     },
     {
       request: new IntentRequestBuilder(skillSettings, 'GetElementAttributeIntent')
-          .withSlotResolution('attribute', 'Masse', 'AttributeName', 'mass')
-          .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
-          .build(),
+        .withSlotResolution('attribute', 'Masse', 'AttributeName', 'mass')
+        .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
+        .build(),
       says: [
         'Die Masse von Wasserstoff ist <say-as interpret-as="unit">1u</say-as>',
         'Die Atommasse von Wasserstoff beträgt <say-as interpret-as="unit">1u</say-as>',
@@ -67,9 +67,9 @@ describe('Test GetElementAttributeIntent', () => {
   alexaTest.test([
     {
       request: new IntentRequestBuilder(skillSettings, 'GetElementAttributeIntent')
-          .withSlotResolution('attribute', 'Masse', 'AttributeName', 'mass')
-          .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
-          .build(),
+        .withSlotResolution('attribute', 'Masse', 'AttributeName', 'mass')
+        .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
+        .build(),
       says: [
         'Die Masse von Wasserstoff ist <say-as interpret-as="unit">1u</say-as>',
         'Die Atommasse von Wasserstoff beträgt <say-as interpret-as="unit">1u</say-as>',
@@ -83,9 +83,9 @@ describe('Test GetElementAttributeIntent', () => {
   alexaTest.test([
     {
       request: new IntentRequestBuilder(skillSettings, 'GetElementAttributeIntent')
-          .withSlotResolution('attribute', 'Ordnungszahl', 'AttributeName', 'number')
-          .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
-          .build(),
+        .withSlotResolution('attribute', 'Ordnungszahl', 'AttributeName', 'number')
+        .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
+        .build(),
       says: [
         'Die Ordnungszahl von Wasserstoff ist 1',
         'Wasserstoff hat die Ordnungszahl 1',
@@ -98,9 +98,9 @@ describe('Test GetElementAttributeIntent', () => {
   alexaTest.test([
     {
       request: new IntentRequestBuilder(skillSettings, 'GetElementAttributeIntent')
-          .withSlotResolution('attribute', 'Symol', 'AttributeName', 'symbol')
-          .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
-          .build(),
+        .withSlotResolution('attribute', 'Symol', 'AttributeName', 'symbol')
+        .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
+        .build(),
       says: [
         'Das Symbol von Wasserstoff ist H',
         'H ist das Symbol von Wasserstoff',
@@ -114,9 +114,9 @@ describe('Test GetElementAttributeIntent', () => {
   alexaTest.test([
     {
       request: new IntentRequestBuilder(skillSettings, 'GetElementAttributeIntent')
-          .withSlotResolution('attribute', 'Außenelektronen', 'AttributeName', 'outerElectrons')
-          .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
-          .build(),
+        .withSlotResolution('attribute', 'Außenelektronen', 'AttributeName', 'outerElectrons')
+        .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
+        .build(),
       says: [
         'Die Anzahl der Valenzelektronen von Wasserstoff ist 1',
         'Die Anzahl der Valenzelektronen von Wasserstoff beträgt 1',
@@ -130,9 +130,9 @@ describe('Test GetElementAttributeIntent', () => {
   alexaTest.test([
     {
       request: new IntentRequestBuilder(skillSettings, 'GetElementAttributeIntent')
-          .withSlotResolution('attribute', 'Elektronegativität', 'AttributeName', 'negativity')
-          .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
-          .build(),
+        .withSlotResolution('attribute', 'Elektronegativität', 'AttributeName', 'negativity')
+        .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
+        .build(),
       says: [
         'Die Elektronegativität von Wasserstoff ist <say-as interpret-as="number">2,2</say-as>',
         'Die Elektronegativität von Wasserstoff beträgt <say-as interpret-as="number">2,2</say-as>',
@@ -147,9 +147,9 @@ describe('Test GetElementAttributeIntent', () => {
   alexaTest.test([
     {
       request: new IntentRequestBuilder(skillSettings, 'GetElementAttributeIntent')
-          .withSlotResolution('attribute', 'Elektronenkonfiguration', 'AttributeName', 'electronConfig')
-          .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
-          .build(),
+        .withSlotResolution('attribute', 'Elektronenkonfiguration', 'AttributeName', 'electronConfig')
+        .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
+        .build(),
       says: [
         'Die Elektronenkonfiguration des Außenelektrons von Wasserstoff ist <say-as interpret-as="number">1</say-as><say-as interpret-as="characters">s</say-as> hoch <say-as interpret-as="number">1</say-as>',
       ],
@@ -160,9 +160,9 @@ describe('Test GetElementAttributeIntent', () => {
   alexaTest.test([
     {
       request: new IntentRequestBuilder(skillSettings, 'GetElementAttributeIntent')
-          .withSlotResolution('attribute', 'Elektronenkonfiguration', 'AttributeName', 'electronConfig')
-          .withSlotResolution('element', 'Bor', 'ElementName', '5')
-          .build(),
+        .withSlotResolution('attribute', 'Elektronenkonfiguration', 'AttributeName', 'electronConfig')
+        .withSlotResolution('element', 'Bor', 'ElementName', '5')
+        .build(),
       says: [
         'Die Elektronenkonfiguration der Außenelektronen von Bor ist <say-as interpret-as="number">2</say-as><say-as interpret-as="characters">s</say-as> hoch <say-as interpret-as="number">2</say-as> <break time=\'500ms\'/> ' +
         '<say-as interpret-as="number">2</say-as><say-as interpret-as="characters">p</say-as> hoch <say-as interpret-as="number">1</say-as>',
@@ -174,9 +174,9 @@ describe('Test GetElementAttributeIntent', () => {
   alexaTest.test([
     {
       request: new IntentRequestBuilder(skillSettings, 'GetElementAttributeIntent')
-          .withSlotResolution('attribute', 'Gruppe', 'AttributeName', 'groupNumber')
-          .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
-          .build(),
+        .withSlotResolution('attribute', 'Gruppe', 'AttributeName', 'groupNumber')
+        .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
+        .build(),
       says: [
         'Die Gruppennummer von Wasserstoff ist 1',
         'Wasserstoff befindet sich in der <say-as interpret-as="ordinal">1</say-as> Gruppe',
@@ -190,9 +190,9 @@ describe('Test GetElementAttributeIntent', () => {
   alexaTest.test([
     {
       request: new IntentRequestBuilder(skillSettings, 'GetElementAttributeIntent')
-          .withSlotResolution('attribute', 'Masse', 'AttributeName', 'mass')
-          .withSlotResolution('element', 'Invalid', 'ElementName', '9999')
-          .build(),
+        .withSlotResolution('attribute', 'Masse', 'AttributeName', 'mass')
+        .withSlotResolution('element', 'Invalid', 'ElementName', '9999')
+        .build(),
       says: [
         'Das Element Invalid habe ich leider nicht gefunden. Versuche ein anderes Element.',
         'Das Element Invalid befindet sich leider nicht in meiner Datenbank. Nenne mir ein anderes Element',
@@ -208,9 +208,9 @@ describe('Test GetElementAttributeIntent', () => {
   alexaTest.test([
     {
       request: new IntentRequestBuilder(skillSettings, 'GetElementAttributeIntent')
-          .withSlotResolution('attribute', 'Invalid', 'AttributeName', 'invalid')
-          .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
-          .build(),
+        .withSlotResolution('attribute', 'Invalid', 'AttributeName', 'invalid')
+        .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
+        .build(),
       says: [
         'Invalid des Elements Wasserstoff ist mir leider nicht bekannt. Nenne mir eine andere Eigenschaft!',
         'Vom Element Wasserstoff sind mir leider keine Informationen über Invalid bekannt. Interessiert dich eine andere Eigenschaft von Wasserstoff?',
@@ -230,9 +230,9 @@ describe('Test GetElementAttributeIntent', () => {
     },
     {
       request: new IntentRequestBuilder(skillSettings, 'GetElementAttributeIntent')
-          .withSlotResolution('attribute', 'Masse', 'AttributeName', 'mass')
-          .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
-          .build(),
+        .withSlotResolution('attribute', 'Masse', 'AttributeName', 'mass')
+        .withSlotResolution('element', 'Wasserstoff', 'ElementName', '1')
+        .build(),
       says: [
         'Die Masse von Wasserstoff ist <say-as interpret-as="unit">1u</say-as>',
         'Die Atommasse von Wasserstoff beträgt <say-as interpret-as="unit">1u</say-as>',

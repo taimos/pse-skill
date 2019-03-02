@@ -7,21 +7,13 @@
     "diff": "cdk diff --app 'node -r ts-node/register pipeline.ts'"
   },
   "devDependencies": {
-    "@types/node": "^10.9.4",
-    "aws-cdk": "^0.23.0",
-    "ts-node": "^6.0.1",
-    "typescript": "^3.1.2"
+    "@types/node": "^11.10.4",
+    "aws-cdk": "^0.25.0",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3333"
   },
   "dependencies": {
-    "@aws-cdk/alexa-ask": "^0.23.0",
-    "@aws-cdk/aws-cloudformation": "^0.23.0",
-    "@aws-cdk/aws-codebuild": "^0.23.0",
-    "@aws-cdk/aws-codecommit": "^0.23.0",
-    "@aws-cdk/aws-codepipeline": "^0.23.0",
-    "@aws-cdk/aws-codepipeline-api": "^0.23.0",
-    "@aws-cdk/aws-ecr": "^0.23.0",
-    "@aws-cdk/aws-iam": "^0.23.0",
-    "@aws-cdk/aws-secretsmanager": "^0.23.0",
-    "@aws-cdk/cdk": "^0.23.0"
+    "taimos-cdk-constructs": "github:taimos/cdk-constructs",
+    "@aws-cdk/cdk": "^0.25.0"
   }
 }
